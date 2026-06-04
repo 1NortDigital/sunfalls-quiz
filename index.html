@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz da Copa da Economia | Sunfalls Energia Solar</title>
+<!-- Google Tag Manager (TODO: trocar GTM-XXXXXXX pelo container da Sunfalls) -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+-->
+<!-- End Google Tag Manager -->
+<meta name="description" content="Descubra em 1 minuto quanto você economiza de energia a cada Copa do Mundo (4 anos) com energia solar da Sunfalls. Londrina, Cascavel e Foz do Iguaçu (PR) e região.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://sunfalls.marketingsolar.com.br/quizz/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sunfalls.marketingsolar.com.br/quizz/">
+<meta property="og:title" content="Quiz da Copa da Economia — Sunfalls Energia Solar">
+<meta property="og:description" content="Responda 3 perguntas e descubra quanto você economiza a cada Copa do Mundo com energia solar.">
+<meta property="og:image" content="https://sunfalls.marketingsolar.com.br/quizz/assets/logo-sunfalls-branca.png">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='30' fill='%230A2A4A'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23FFB020' stroke-width='5'/%3E%3Cg stroke='%23FFB020' stroke-width='4' stroke-linecap='round'%3E%3Cline x1='50' y1='20' x2='50' y2='30'/%3E%3Cline x1='50' y1='70' x2='50' y2='80'/%3E%3Cline x1='20' y1='50' x2='30' y2='50'/%3E%3Cline x1='70' y1='50' x2='80' y2='50'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='13' fill='%23FFD15C'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+.material-icons{font-size:1em;vertical-align:-0.14em;line-height:1;display:inline-block}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{max-width:100%;overflow-x:hidden}
+img{max-width:100%;height:auto}
+:root{
+  /* === Tema Sunfalls — Estádio ao Entardecer (Azul-noite & Sol) === */
+  --night:#0E3A63;         /* azul estádio */
+  --night-mid:#0C2D4E;
+  --night-dark:#082138;
+  --night-deep:#04101F;    /* fundo escuro */
+  --night-line:rgba(255,255,255,.07);
+  --sun:#FFB020;           /* dourado/laranja do sol (marca Sunfalls) */
+  --sun-dark:#E08A12;
+  --sun-light:#FFD15C;
+  --sun-glow:rgba(255,176,32,.42);
+  --white:#f7fbff;
+  --ink:#04101F;
+  --gray-500:#6B7C8E;
+  --ok:#25D366;
+  --r:16px;--r-lg:24px;--r-pill:60px;--t:.25s ease;
+}
+body{
+  font-family:'Inter',sans-serif;color:var(--white);line-height:1.6;font-weight:500;min-height:100vh;
+  background:
+    radial-gradient(1200px 560px at 50% -12%,rgba(255,176,32,.20),transparent 62%),
+    repeating-linear-gradient(90deg,transparent 0 78px,var(--night-line) 78px 79px),
+    linear-gradient(165deg,var(--night) 0%,var(--night-mid) 38%,var(--night-dark) 72%,var(--night-deep) 100%);
+  background-attachment:fixed;
+  display:flex;flex-direction:column;align-items:center;
+  padding:22px 16px 40px;
+}
+/* linha central do campo decorativa */
+body::before{content:'';position:fixed;top:50%;left:0;right:0;height:2px;background:var(--night-line);z-index:0;pointer-events:none}
+body::after{content:'';position:fixed;top:50%;left:50%;width:200px;height:200px;border:2px solid var(--night-line);border-radius:50%;transform:translate(-50%,-50%);z-index:0;pointer-events:none}
+
+.wrap{width:100%;max-width:620px;position:relative;z-index:2;margin:auto 0}
+
+/* BRAND */
+.brand{display:flex;justify-content:center;margin-bottom:18px}
+.brand img{height:74px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.45))}
+@media(max-width:520px){.brand img{height:56px}}
+
+/* PROGRESS */
+.progress{display:none;margin-bottom:16px}
+.progress.show{display:block}
+.progress-top{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;font-weight:700;letter-spacing:.5px;color:var(--sun-light);text-transform:uppercase;margin-bottom:8px}
+.progress-bar{height:9px;background:rgba(255,255,255,.14);border-radius:60px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--sun),var(--sun-light));border-radius:60px;transition:width .45s cubic-bezier(.4,0,.2,1);box-shadow:0 0 14px var(--sun-glow)}
+
+/* CARD */
+.card{background:rgba(8,33,56,.80);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:38px 30px;box-shadow:0 24px 70px rgba(0,0,0,.5);position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--sun),var(--sun-light),var(--sun))}
+@media(max-width:520px){.card{padding:30px 20px}}
+
+/* SCREENS */
+.screen{display:none;animation:fadein .4s ease}
+.screen.active{display:block}
+@keyframes fadein{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* INTRO */
+.cup-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,176,32,.16);border:1px solid rgba(255,176,32,.45);border-radius:60px;padding:7px 18px;font-size:12px;font-weight:800;letter-spacing:1.4px;color:var(--sun-light);text-transform:uppercase;margin-bottom:20px}
+.cup-badge .pulse{width:8px;height:8px;background:var(--sun);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--sun-glow)}70%{box-shadow:0 0 0 9px rgba(255,176,32,0)}100%{box-shadow:0 0 0 0 rgba(255,176,32,0)}}
+.trophy{font-size:62px;line-height:1;margin-bottom:6px;filter:drop-shadow(0 6px 16px rgba(255,176,32,.5))}
+h1{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(25px,6vw,42px);line-height:1.04;letter-spacing:.4px;text-transform:uppercase;margin-bottom:16px}
+h1 span{display:block}
+h1 .l2{margin-top:9px}
+h1 .hl{color:var(--sun);margin-top:13px}
+.intro-sub{font-size:16.5px;color:rgba(255,255,255,.86);margin-bottom:14px;font-weight:500}
+.intro-sub strong{color:var(--sun-light)}
+.intro-feats{list-style:none;display:flex;flex-direction:column;gap:9px;margin:18px 0 26px;text-align:left;max-width:380px;margin-left:auto;margin-right:auto}
+.intro-feats-solo{justify-content:center}
+.intro-feats-solo li{justify-content:center}
+.intro-feats li{display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:600;color:rgba(255,255,255,.9)}
+.intro-feats .material-icons{color:var(--sun);font-size:21px}
+.intro-center{text-align:center}
+
+/* QUESTION */
+.q-num{font-size:13px;font-weight:800;letter-spacing:1px;color:var(--sun);text-transform:uppercase;margin-bottom:10px}
+.q-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(23px,5.2vw,32px);line-height:1.1;text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px}
+.q-help{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:24px;font-weight:500}
+
+/* OPTION BUTTONS */
+.opts{display:flex;flex-direction:column;gap:13px}
+.opt{display:flex;align-items:center;gap:15px;width:100%;text-align:left;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.16);border-radius:var(--r);padding:18px 20px;color:var(--white);font-family:'Inter',sans-serif;font-size:16.5px;font-weight:700;cursor:pointer;transition:all var(--t)}
+.opt:hover{border-color:var(--sun);background:rgba(255,176,32,.12);transform:translateY(-2px)}
+.opt.selected{border-color:var(--sun);background:rgba(255,176,32,.18);box-shadow:0 0 0 4px var(--sun-glow)}
+.opt-ic{width:46px;height:46px;border-radius:12px;background:rgba(255,176,32,.18);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--sun-light);flex-shrink:0}
+.opt-txt{flex:1}
+.opt-txt small{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.6);margin-top:2px}
+.opt .check{margin-left:auto;color:var(--sun);font-size:22px;opacity:0;transition:opacity var(--t)}
+.opt.selected .check{opacity:1}
+
+/* SELECT (cidade) */
+.sel-wrap{position:relative}
+.sel-wrap .material-icons.pin{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--sun);font-size:22px;pointer-events:none}
+select.city{width:100%;padding:18px 18px 18px 48px;background:rgba(255,255,255,.95);border:2px solid rgba(255,255,255,.2);border-radius:var(--r);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;font-weight:600;cursor:pointer;appearance:none}
+select.city:focus{outline:none;border-color:var(--sun)}
+.sel-wrap .material-icons.arr{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--night);font-size:24px;pointer-events:none}
+select.city optgroup{font-weight:800;color:var(--night-dark)}
+select.city option{font-weight:500;color:var(--ink)}
+
+/* INPUTS (lead) */
+.fg{margin-bottom:14px;text-align:left}
+.fg label{display:block;font-size:13px;font-weight:700;color:var(--sun-light);margin-bottom:7px;letter-spacing:.3px}
+.fg input{width:100%;padding:16px 18px;background:rgba(255,255,255,.95);border:2px solid rgba(255,255,255,.2);border-radius:var(--r);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;font-weight:600;transition:border-color var(--t)}
+.fg input:focus{outline:none;border-color:var(--sun)}
+.fg input::placeholder{color:#9aa6b2}
+.err{font-size:12.5px;color:#FF6B6B;margin-top:5px;display:none;font-weight:600}
+.err.show{display:block}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;letter-spacing:1px;text-transform:uppercase;padding:18px 26px;border-radius:var(--r-pill);border:none;cursor:pointer;transition:all var(--t);text-decoration:none}
+.btn-gold{background:linear-gradient(135deg,var(--sun),var(--sun-light));color:var(--night-deep);box-shadow:0 10px 30px var(--sun-glow)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(255,176,32,.6)}
+.btn-gold:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none;animation:none}
+.btn-pulse{animation:btnPulse 1.4s ease-in-out infinite}
+.btn-pulse:hover{animation-play-state:paused}
+@keyframes btnPulse{0%,100%{transform:scale(1);box-shadow:0 10px 30px var(--sun-glow)}50%{transform:scale(1.05);box-shadow:0 18px 48px rgba(255,176,32,.65)}}
+.btn-ghost{background:transparent;color:rgba(255,255,255,.7);border:none;font-family:'Inter';font-size:14px;font-weight:700;text-transform:none;letter-spacing:0;padding:12px;width:auto;cursor:pointer}
+.btn-ghost:hover{color:var(--sun-light)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px}
+.nav-row .btn-gold{width:auto;padding:16px 34px}
+.spinner{width:20px;height:20px;border:2.5px solid rgba(4,16,31,.3);border-top-color:var(--night-deep);border-radius:50%;animation:spin .7s linear infinite;display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* RESULT */
+.res-head{text-align:center;margin-bottom:22px}
+.res-sys{background:rgba(255,176,32,.1);border:1px solid rgba(255,176,32,.35);border-radius:var(--r);padding:18px 20px;display:flex;align-items:center;gap:14px;margin-bottom:18px;text-align:left}
+.res-sys .material-icons{font-size:34px;color:var(--sun)}
+.res-sys b{display:block;font-size:17px;color:var(--sun-light);font-family:'Oswald';font-weight:600;letter-spacing:.3px}
+.res-sys span{font-size:13px;color:rgba(255,255,255,.72);font-weight:500}
+.res-eco{text-align:center;background:linear-gradient(135deg,rgba(14,58,99,.6),rgba(4,16,31,.5));border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:26px 18px;margin-bottom:8px;position:relative}
+.res-eco .lbl{font-size:13px;font-weight:700;letter-spacing:.6px;color:rgba(255,255,255,.78);text-transform:uppercase}
+.res-eco .big{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(40px,11vw,68px);line-height:1;color:var(--sun);margin:6px 0;text-shadow:0 4px 20px var(--sun-glow)}
+.res-eco .cup{font-size:14px;color:var(--sun-light);font-weight:700}
+.lock-note{font-size:12.5px;color:rgba(255,255,255,.6);text-align:center;margin:14px 0 4px}
+
+/* LEAD GATE */
+.gate-tag{display:inline-flex;align-items:center;gap:7px;background:rgba(255,176,32,.16);border:1px solid rgba(255,176,32,.4);color:var(--sun-light);font-size:12px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:6px 14px;border-radius:60px;margin-bottom:14px}
+.priv{font-size:11.5px;color:rgba(255,255,255,.5);text-align:center;margin-top:12px}
+.priv .material-icons{font-size:14px;vertical-align:-.18em}
+
+/* SUCCESS */
+.success{text-align:center;padding:14px 0}
+.success .ring{width:90px;height:90px;border-radius:50%;background:rgba(37,211,102,.15);border:2px solid var(--ok);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;animation:pop .4s ease}
+.success .ring .material-icons{font-size:52px;color:var(--ok)}
+@keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.success h2{font-family:'Oswald';font-weight:700;font-size:30px;text-transform:uppercase;letter-spacing:.5px;color:var(--ok);margin-bottom:8px}
+.success p{color:rgba(255,255,255,.8);font-size:15px}
+
+/* FOOTER */
+.foot{text-align:center;margin-top:20px;font-size:12px;color:rgba(255,255,255,.5)}
+.foot a{color:var(--sun-light);text-decoration:none}
+.disc{font-size:11px;color:rgba(255,255,255,.42);text-align:center;margin-top:10px;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- PROGRESS -->
+  <div class="progress" id="progress">
+    <div class="progress-top"><span id="prog-label">Pergunta 1 de 3</span><span id="prog-pct">33%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
+  </div>
+
+  <div class="card">
+
+    <div class="brand"><img src="assets/logo-sunfalls-branca.png" alt="Sunfalls Energia Solar"></div>
+
+    <!-- ===== TELA 0 — INTRO ===== -->
+    <section class="screen active intro-center" id="s-intro">
+      <span class="cup-badge"><span class="pulse"></span> Quiz da Copa da Economia</span>
+      <h1><span class="l1">Descubra quanto você</span><span class="l2">pode economizar</span><span class="hl">A cada Copa do Mundo</span></h1>
+      <p class="intro-sub">Responda <strong>3 perguntas rápidas</strong> e veja quanto a energia solar coloca no seu bolso a cada <strong>4 anos</strong> — uma Copa inteira de economia.</p>
+      <ul class="intro-feats intro-feats-solo">
+        <li><span class="material-icons">timer</span> Leva menos de 1 minuto</li>
+      </ul>
+      <button class="btn btn-gold btn-pulse" onclick="goQuiz()">☀️ Iniciar o Quiz</button>
+    </section>
+
+    <!-- ===== P1 — CONTA DE LUZ ===== -->
+    <section class="screen" id="s-q1">
+      <div class="q-num">Pergunta 1 de 3</div>
+      <h2 class="q-title">Sua conta de luz é de:</h2>
+      <p class="q-help">Selecione a faixa mais próxima da sua média mensal.</p>
+      <div class="opts">
+        <button class="opt" data-q="conta" data-val="300" onclick="pick(this)">
+          <span class="opt-ic"><span class="material-icons">lightbulb</span></span>
+          <span class="opt-txt">R$ 300 / mês</span>
+          <span class="check material-icons">check_circle</span>
+        </button>
+        <button class="opt" data-q="conta" data-val="600" onclick="pick(this)">
+          <span class="opt-ic"><span class="material-icons">flash_on</span></span>
+          <span class="opt-txt">R$ 600 / mês</span>
+          <span class="check material-icons">check_circle</span>
+        </button>
+        <button class="opt" data-q="conta" data-val="900" onclick="pick(this)">
+          <span class="opt-ic"><span class="material-icons">electric_bolt</span></span>
+          <span class="opt-txt">+R$ 900 / mês</span>
+          <span class="check material-icons">check_circle</span>
+        </button>
+      </div>
+      <div class="nav-row">
+        <button class="btn-ghost" onclick="back('s-intro',0)"><span class="material-icons" style="font-size:16px;vertical-align:-.2em">arrow_back</span> Voltar</button>
+      </div>
+    </section>
+
+    <!-- ===== P2 — CASA PRÓPRIA ===== -->
+    <section class="screen" id="s-q2">
+      <div class="q-num">Pergunta 2 de 3</div>
+      <h2 class="q-title">Você tem casa própria?</h2>
+      <p class="q-help">Isso define a melhor solução pra você.</p>
+      <div class="opts">
+        <button class="opt" data-q="casa" data-val="Sim" onclick="pick(this)">
+          <span class="opt-ic"><span class="material-icons">home</span></span>
+          <span class="opt-txt">Sim, é minha<small>Posso instalar no meu telhado</small></span>
+          <span class="check material-icons">check_circle</span>
+        </button>
+        <button class="opt" data-q="casa" data-val="Não / Alugada" onclick="pick(this)">
+          <span class="opt-ic"><span class="material-icons">key</span></span>
+          <span class="opt-txt">Não / é alugada<small>Quero economizar mesmo assim</small></span>
+          <span class="check material-icons">check_circle</span>
+        </button>
+      </div>
+      <div class="nav-row">
+        <button class="btn-ghost" onclick="back('s-q1',1)"><span class="material-icons" style="font-size:16px;vertical-align:-.2em">arrow_back</span> Voltar</button>
+      </div>
+    </section>
+
+    <!-- ===== P3 — CIDADE (roteia WhatsApp) ===== -->
+    <section class="screen" id="s-q3">
+      <div class="q-num">Pergunta 3 de 3</div>
+      <h2 class="q-title">Qual a sua cidade?</h2>
+      <p class="q-help">Atendemos sua cidade e região.</p>
+      <div class="sel-wrap">
+        <span class="material-icons pin">location_on</span>
+        <select class="city" id="cidade" onchange="cityChange()">
+          <option value="">Selecione sua cidade...</option>
+          <optgroup label="Londrina e região (PR)">
+            <option data-loja="londrina">Londrina</option>
+            <option data-loja="londrina">Cambé</option>
+            <option data-loja="londrina">Ibiporã</option>
+            <option data-loja="londrina">Rolândia</option>
+            <option data-loja="londrina">Arapongas</option>
+            <option data-loja="londrina">Apucarana</option>
+            <option data-loja="londrina">Jataizinho</option>
+            <option data-loja="londrina">Sertanópolis</option>
+            <option data-loja="londrina">Bela Vista do Paraíso</option>
+            <option data-loja="londrina">Tamarana</option>
+            <option data-loja="londrina">Primeiro de Maio</option>
+            <option data-loja="londrina">Jaguapitã</option>
+            <option data-loja="londrina">Cornélio Procópio</option>
+            <option data-loja="londrina">Assaí</option>
+            <option data-loja="londrina">Outra cidade perto de Londrina</option>
+          </optgroup>
+          <optgroup label="Cascavel e região (PR)">
+            <option data-loja="cascavel">Cascavel</option>
+            <option data-loja="cascavel">Toledo</option>
+            <option data-loja="cascavel">Corbélia</option>
+            <option data-loja="cascavel">Cafelândia</option>
+            <option data-loja="cascavel">Catanduvas</option>
+            <option data-loja="cascavel">Santa Tereza do Oeste</option>
+            <option data-loja="cascavel">Capitão Leônidas Marques</option>
+            <option data-loja="cascavel">Três Barras do Paraná</option>
+            <option data-loja="cascavel">Boa Vista da Aparecida</option>
+            <option data-loja="cascavel">Guaraniaçu</option>
+            <option data-loja="cascavel">Nova Aurora</option>
+            <option data-loja="cascavel">Braganey</option>
+            <option data-loja="cascavel">Ibema</option>
+            <option data-loja="cascavel">Ouro Verde do Oeste</option>
+            <option data-loja="cascavel">Outra cidade perto de Cascavel</option>
+          </optgroup>
+          <optgroup label="Foz do Iguaçu e região (PR)">
+            <option data-loja="foz">Foz do Iguaçu</option>
+            <option data-loja="foz">Santa Terezinha de Itaipu</option>
+            <option data-loja="foz">São Miguel do Iguaçu</option>
+            <option data-loja="foz">Medianeira</option>
+            <option data-loja="foz">Matelândia</option>
+            <option data-loja="foz">Céu Azul</option>
+            <option data-loja="foz">Serranópolis do Iguaçu</option>
+            <option data-loja="foz">Itaipulândia</option>
+            <option data-loja="foz">Missal</option>
+            <option data-loja="foz">Santa Helena</option>
+            <option data-loja="foz">Ramilândia</option>
+            <option data-loja="foz">Outra cidade perto de Foz do Iguaçu</option>
+          </optgroup>
+        </select>
+        <span class="material-icons arr">expand_more</span>
+      </div>
+      <div class="err" id="cidade-err">Selecione sua cidade pra continuar.</div>
+      <div class="nav-row">
+        <button class="btn-ghost" onclick="back('s-q2',2)"><span class="material-icons" style="font-size:16px;vertical-align:-.2em">arrow_back</span> Voltar</button>
+        <button class="btn btn-gold" onclick="verResultado()">Ver resultado <span class="material-icons" style="font-size:20px">arrow_forward</span></button>
+      </div>
+    </section>
+
+    <!-- ===== RESULTADO + CAPTURA ===== -->
+    <section class="screen" id="s-result">
+      <div class="res-head">
+        <span class="gate-tag"><span class="material-icons" style="font-size:14px">emoji_events</span> Seu resultado</span>
+        <h2 class="q-title" style="font-size:clamp(22px,5vw,30px)">O sistema ideal pro seu perfil</h2>
+      </div>
+
+      <div class="res-sys">
+        <span class="material-icons">solar_power</span>
+        <div><b id="r-sistema">—</b><span id="r-sistema-sub">—</span></div>
+      </div>
+
+      <div class="res-eco">
+        <div class="lbl">Você economiza por Copa do Mundo</div>
+        <div class="big"><span id="r-eco">R$ 00.000</span></div>
+        <div class="cup">☀️ a cada 4 anos · <span id="r-eco-ano">R$ 0.000</span>/ano</div>
+      </div>
+
+      <p class="lock-note"><span class="material-icons" style="font-size:15px;vertical-align:-.2em">chat</span> Quer o <b>orçamento exato</b>? Preencha e receba no seu WhatsApp 👇</p>
+
+      <form id="leadForm" onsubmit="enviarLead(event)" style="margin-top:18px">
+        <div class="fg">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" placeholder="Como podemos te chamar?" required autocomplete="name">
+        </div>
+        <div class="fg">
+          <label for="tel">Seu WhatsApp</label>
+          <input type="tel" id="tel" placeholder="(43) 9 0000-0000" required inputmode="tel" autocomplete="tel">
+          <div class="err" id="tel-err">Informe um WhatsApp válido com DDD.</div>
+        </div>
+        <button type="submit" class="btn btn-gold" id="btn-lead">
+          <span id="btn-lead-txt">☀️ Liberar resultado completo</span>
+          <span class="spinner" id="btn-lead-spin"></span>
+        </button>
+        <p class="priv"><span class="material-icons">lock</span> Seus dados estão seguros. Sem spam.</p>
+      </form>
+    </section>
+
+    <!-- ===== SUCESSO ===== -->
+    <section class="screen" id="s-success">
+      <div class="success">
+        <div class="ring"><span class="material-icons">check</span></div>
+        <h2>Recebemos o seu cadastro! ✅</h2>
+        <p>Tudo certo, <b id="suc-nome">!</b> Estamos preparando seu resultado completo…</p>
+        <p style="margin-top:8px;font-size:13px;color:rgba(255,255,255,.6)">Redirecionando pra sua página de resultado…</p>
+      </div>
+    </section>
+
+  </div>
+
+  <p class="foot">☀️ Sunfalls Energia Solar · Londrina · Cascavel · Foz do Iguaçu (PR) &nbsp;|&nbsp; <a href="#" onclick="location.reload();return false;">Refazer o quiz</a></p>
+</div>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+window.dataLayer = window.dataLayer || [];
+
+// ====================================================================
+// CONFIG Sunfalls — QUIZ (planilha própria; origem identificada por pagina/form_type)
+// ====================================================================
+const WEBHOOK = 'https://webhooks.matheusscherrer.com.br/webhook/landing-page'; // n8n da agência
+const SHEET_BACKUP = ''; // TODO: colar a URL /exec do Apps Script da planilha Sunfalls (SHEET_ID 1dAEEWx9k4kmSbZ9IGmH-twkgSIDuO1RnqZ_7CEyCgLk)
+const PAGINA = 'quiz-sunfalls';           // identifica a ORIGEM como quiz (roteia/filtra no n8n e na planilha)
+const CLICKUP_CLIENT_ID = '86afxmfhc';    // ID Sunfalls no ClickUp (vai em todo lead)
+const REDIRECT_OBRIGADO = 'obrigado.html';// página de obrigado
+// WhatsApp por loja (roteado pela cidade — raio ~80km)
+const WHATS_LOJA = {
+  londrina:{numero:'554399124301', nome:'Sunfalls Londrina (PR)'},
+  cascavel:{numero:'554599852431', nome:'Sunfalls Cascavel (PR)'},
+  foz:     {numero:'554591441136', nome:'Sunfalls Foz do Iguaçu (PR)'}
+};
+
+// estado do quiz
+const Q = {conta:'', casa:'', cidade:'', loja:'', whats:'', lojaNome:''};
+
+// === Parâmetros de cálculo (Paraná) ===
+const TARIFA_KWH      = 0.95;  // R$/kWh — valor cheio pago no PR (ajuste aqui se mudar)
+const GERACAO_KWP_MES = 120;   // kWh gerados por kWp/mês na região (Londrina/Cascavel/Foz)
+const POT_PLACA_KW    = 0.57;  // potência por placa (~570 Wp) p/ estimar nº de placas
+const FATOR_ECONOMIA  = 0.90;  // % da conta que vira economia (resta o custo de disponibilidade)
+
+// faixas de conta -> base estimada p/ cálculo + nome do sistema sugerido
+const FAIXA = {
+  '300':{base:300, sistema:'Kit Solar Residencial Compacto',    faixaTxt:'ideal pra contas até R$ 300'},
+  '600':{base:600, sistema:'Sistema Solar Residencial',         faixaTxt:'ideal pra contas em torno de R$ 600'},
+  '900':{base:1100,sistema:'Sistema Solar de Alta Performance', faixaTxt:'ideal pra contas acima de R$ 900'}
+};
+
+// ---- UTM & TRACKING ----
+function getUTMs(){
+  const p=new URLSearchParams(window.location.search);
+  return {
+    utm_source:p.get('utm_source')||'',utm_medium:p.get('utm_medium')||'',
+    utm_campaign:p.get('utm_campaign')||'',utm_content:p.get('utm_content')||'',
+    utm_term:p.get('utm_term')||p.get('utm_keyword')||'',
+    gclid:p.get('gclid')||'',fbclid:p.get('fbclid')||'',
+    page_url:window.location.href.split('#')[0],page_referer:document.referrer||''
+  };
+}
+function setCookie(k,v,days=30){const exp=new Date(Date.now()+days*864e5).toUTCString();document.cookie=`${k}=${encodeURIComponent(v)};expires=${exp};path=/;SameSite=Lax`;}
+function getCookie(k){const m=document.cookie.match(new RegExp('(?:^|; )'+k+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
+function saveUTMsCookies(){const u=getUTMs();for(const[k,v]of Object.entries(u)) if(v) setCookie('sfq_'+k,v);if(!getCookie('sfq_landing_url'))setCookie('sfq_landing_url',u.page_url);return u;}
+function mergeUTMs(){
+  const url=getUTMs();const merged={};
+  const keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'];
+  for(const k of keys) merged[k]=url[k]||(getCookie('sfq_'+k)||'');
+  merged.page_url=url.page_url;merged.page_referer=url.page_referer;merged.landing_url=getCookie('sfq_landing_url')||url.page_url;return merged;
+}
+async function getIP(){try{const r=await fetch('https://api.ipify.org?format=json',{cache:'no-cache'});const d=await r.json();return d.ip||'';}catch{return '';}}
+saveUTMsCookies();
+
+// ---- WEBHOOK + PLANILHA ----
+async function sendWebhook(payload){
+  if(CLICKUP_CLIENT_ID) payload.clickup_client_id=CLICKUP_CLIENT_ID;
+  if(SHEET_BACKUP){
+    try{fetch(SHEET_BACKUP,{method:'POST',mode:'no-cors',keepalive:true,body:JSON.stringify(payload)});}
+    catch(e){console.warn('[Sunfalls Quiz] Planilha backup falhou:',e);}
+  }
+  if(!WEBHOOK) return false;
+  const opts={method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)};
+  try{const res=await fetch(WEBHOOK,opts);if(!res.ok) console.warn('[Sunfalls Quiz] Webhook status:',res.status);return true;}
+  catch(err){try{await fetch(WEBHOOK,{...opts,keepalive:true});}catch(e2){console.warn('[Sunfalls Quiz] Webhook falhou:',e2);}return false;}
+}
+
+// ---- PHONE MASK ----
+function applyPhoneMask(el){
+  el.addEventListener('input',function(){
+    let v=this.value.replace(/\D/g,'').slice(0,11);
+    if(v.length<=10) v=v.replace(/^(\d{2})(\d{4})(\d{0,4})$/,'($1) $2-$3');
+    else v=v.replace(/^(\d{2})(\d{5})(\d{0,4})$/,'($1) $2-$3');
+    this.value=v;
+  });
+}
+function validPhone(p){return p.replace(/\D/g,'').length>=10}
+
+// ---- NAVEGAÇÃO ENTRE TELAS ----
+let stepAtual=0; // 0 intro, 1..3 perguntas
+function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+function setProgress(step){
+  const prog=document.getElementById('progress');
+  if(step>=1&&step<=3){prog.classList.add('show');const pct=Math.round(step/3*100);document.getElementById('prog-fill').style.width=pct+'%';document.getElementById('prog-label').textContent='Pergunta '+step+' de 3';document.getElementById('prog-pct').textContent=pct+'%';}
+  else prog.classList.remove('show');
+  stepAtual=step;
+}
+function goQuiz(){showScreen('s-q1');setProgress(1);}
+function back(id,step){showScreen(id);setProgress(step);}
+
+// ---- SELEÇÃO DE OPÇÃO (avança sozinho) ----
+function pick(btn){
+  const q=btn.dataset.q,val=btn.dataset.val;
+  Q[q]=val;
+  btn.parentElement.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+  btn.classList.add('selected');
+  setTimeout(()=>{
+    if(q==='conta'){showScreen('s-q2');setProgress(2);}
+    else if(q==='casa'){showScreen('s-q3');setProgress(3);}
+  },260);
+}
+
+// ---- CIDADE -> LOJA / WHATSAPP ----
+function cityChange(){
+  const sel=document.getElementById('cidade');
+  const opt=sel.options[sel.selectedIndex];
+  Q.cidade=sel.value;
+  const loja=opt?opt.dataset.loja:'';
+  if(loja&&WHATS_LOJA[loja]){Q.loja=loja;Q.whats=WHATS_LOJA[loja].numero;Q.lojaNome=WHATS_LOJA[loja].nome;}
+  document.getElementById('cidade-err').classList.remove('show');
+}
+
+// ---- RESULTADO ----
+function verResultado(){
+  if(!Q.cidade){document.getElementById('cidade-err').classList.add('show');return;}
+  const f=FAIXA[Q.conta]||FAIXA['600'];
+  // consumo real a partir da tarifa do PR (R$ 0,95/kWh) -> dimensiona o sistema
+  const consumoExato=f.base/TARIFA_KWH;                 // kWh/mês
+  const consumoKwh=Math.round(consumoExato);
+  const kWp=consumoExato/GERACAO_KWP_MES;               // potência necessária
+  const nPlacas=Math.ceil(kWp/POT_PLACA_KW);
+  const kWpTxt=kWp.toFixed(1).replace('.',',');
+  // economia: consumo (kWh) × tarifa × 90% (resta o custo de disponibilidade)
+  const ecoAno=Math.round(consumoExato*TARIFA_KWH*FATOR_ECONOMIA*12);
+  const ecoCopa=ecoAno*4; // 4 anos = 1 Copa
+  Q.sistema=f.sistema; Q.ecoCopa=ecoCopa; Q.ecoAno=ecoAno;
+  Q.kWp=kWpTxt; Q.placas=nPlacas; Q.consumoKwh=consumoKwh;
+  // texto do sistema (ajusta se imóvel não é próprio)
+  let sysNome=f.sistema, sysSub='~'+kWpTxt+' kWp · '+nPlacas+' placas · ~'+consumoKwh+' kWh/mês — '+f.faixaTxt;
+  if(Q.casa==='Não / Alugada'){
+    sysNome='Locação de Energia / Usina por Assinatura';
+    sysSub='Economize sem instalar nada no telhado — perfeito pra imóvel alugado. Equivalente a um '+f.sistema.toLowerCase()+' (~'+kWpTxt+' kWp).';
+  }
+  document.getElementById('r-sistema').textContent=sysNome;
+  document.getElementById('r-sistema-sub').textContent=sysSub;
+  document.getElementById('r-eco').textContent='R$ '+ecoCopa.toLocaleString('pt-BR');
+  document.getElementById('r-eco-ano').textContent='R$ '+ecoAno.toLocaleString('pt-BR');
+  Q.sistemaNome=sysNome;
+  showScreen('s-result');setProgress(99);
+  document.getElementById('progress').classList.remove('show');
+  applyPhoneMask(document.getElementById('tel'));
+  dataLayer.push({event:'quiz_resultado',conta:Q.conta,casa:Q.casa,cidade:Q.cidade,loja:Q.loja,economia_copa:ecoCopa});
+}
+
+// ---- ENVIO DO LEAD ----
+async function enviarLead(e){
+  e.preventDefault();
+  const nome=document.getElementById('nome').value.trim();
+  const tel=document.getElementById('tel').value.trim();
+  document.getElementById('tel-err').classList.remove('show');
+  if(!nome){document.getElementById('nome').focus();return;}
+  if(!validPhone(tel)){document.getElementById('tel-err').classList.add('show');return;}
+
+  const btn=document.getElementById('btn-lead');btn.disabled=true;
+  document.getElementById('btn-lead-txt').style.display='none';
+  document.getElementById('btn-lead-spin').style.display='inline-block';
+
+  const ip=await getIP();const utms=mergeUTMs();
+  const resumo=`Quiz Copa | Conta: R$${Q.conta==='900'?'900+':Q.conta}/mês | Consumo: ~${Q.consumoKwh} kWh/mês | Casa própria: ${Q.casa} | Cidade: ${Q.cidade} | Loja: ${Q.lojaNome} | Sistema ideal: ${Q.sistemaNome} (~${Q.kWp} kWp · ${Q.placas} placas) | Economia/Copa: R$ ${Q.ecoCopa.toLocaleString('pt-BR')}`;
+  const payload={
+    form_type:'quiz_solar', pagina:PAGINA,
+    nome, telefone:tel, cidade:Q.cidade,
+    conta_mensal:(Q.conta==='900'?'900+':Q.conta),
+    casa_propria:Q.casa, loja:Q.lojaNome,
+    sistema_ideal:Q.sistemaNome, potencia_kwp:Q.kWp+' kWp', placas:String(Q.placas), consumo_kwh:String(Q.consumoKwh),
+    economia_4anos:'R$ '+Q.ecoCopa.toLocaleString('pt-BR'),
+    mensagem:resumo, ip,
+    ...utms, timestamp:new Date().toISOString()
+  };
+  setCookie('sfq_lead',JSON.stringify(payload),30);
+  await sendWebhook(payload);
+  dataLayer.push({event:'lead_gerado',form_type:'quiz_solar',telefone:tel,loja:Q.loja,...utms});
+
+  // guarda resultado p/ a página de obrigado
+  try{localStorage.setItem('sunfalls_quiz',JSON.stringify({
+    nome, telefone:tel, cidade:Q.cidade, loja:Q.loja, lojaNome:Q.lojaNome, whats:Q.whats,
+    conta:Q.conta, casa:Q.casa, sistema:Q.sistemaNome,
+    kWp:Q.kWp, placas:Q.placas, consumoKwh:Q.consumoKwh,
+    ecoCopa:Q.ecoCopa, ecoAno:Q.ecoAno
+  }));}catch(e){}
+
+  // tela de sucesso -> redireciona
+  document.getElementById('suc-nome').textContent=nome.split(' ')[0]+'!';
+  showScreen('s-success');
+  setTimeout(()=>{ window.location.href=REDIRECT_OBRIGADO; },1700);
+}
+</script>
+</body>
+</html>

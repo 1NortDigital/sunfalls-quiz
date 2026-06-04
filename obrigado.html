@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seu resultado | Sunfalls Energia Solar</title>
+<!-- Google Tag Manager (TODO: trocar GTM-XXXXXXX pelo container da Sunfalls) -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+-->
+<!-- End Google Tag Manager -->
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='30' fill='%230A2A4A'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23FFB020' stroke-width='5'/%3E%3Cg stroke='%23FFB020' stroke-width='4' stroke-linecap='round'%3E%3Cline x1='50' y1='20' x2='50' y2='30'/%3E%3Cline x1='50' y1='70' x2='50' y2='80'/%3E%3Cline x1='20' y1='50' x2='30' y2='50'/%3E%3Cline x1='70' y1='50' x2='80' y2='50'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='13' fill='%23FFD15C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+.material-icons{font-size:1em;vertical-align:-0.14em;line-height:1;display:inline-block}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{max-width:100%;overflow-x:hidden}
+img{max-width:100%;height:auto}
+:root{
+  --night:#0E3A63;--night-mid:#0C2D4E;--night-dark:#082138;--night-deep:#04101F;
+  --night-line:rgba(255,255,255,.07);
+  --sun:#FFB020;--sun-light:#FFD15C;--sun-glow:rgba(255,176,32,.42);
+  --white:#f7fbff;--ink:#04101F;--ok:#25D366;
+  --r:16px;--r-lg:24px;--r-pill:60px;--t:.25s ease;
+}
+body{
+  font-family:'Inter',sans-serif;color:var(--white);line-height:1.6;font-weight:500;min-height:100vh;
+  background:
+    radial-gradient(1200px 560px at 50% -12%,rgba(255,176,32,.20),transparent 62%),
+    repeating-linear-gradient(90deg,transparent 0 78px,var(--night-line) 78px 79px),
+    linear-gradient(165deg,var(--night) 0%,var(--night-mid) 38%,var(--night-dark) 72%,var(--night-deep) 100%);
+  background-attachment:fixed;display:flex;flex-direction:column;align-items:center;padding:30px 16px 50px;
+}
+.wrap{width:100%;max-width:620px;position:relative;z-index:2;margin:auto 0}
+.brand{display:flex;justify-content:center;margin-bottom:20px}
+.brand img{height:72px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.45))}
+@media(max-width:520px){.brand img{height:54px}}
+.card{background:rgba(8,33,56,.80);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:40px 30px;box-shadow:0 24px 70px rgba(0,0,0,.5);position:relative;overflow:hidden;text-align:center}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--sun),var(--sun-light),var(--sun))}
+@media(max-width:520px){.card{padding:32px 20px}}
+.ring{width:92px;height:92px;border-radius:50%;background:rgba(37,211,102,.15);border:2px solid var(--ok);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;animation:pop .45s ease}
+.ring .material-icons{font-size:54px;color:var(--ok)}
+@keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+h1{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(26px,6vw,38px);text-transform:uppercase;letter-spacing:.5px;line-height:1.05;margin-bottom:10px}
+h1 .hl{color:var(--sun)}
+.lead{font-size:16px;color:rgba(255,255,255,.85);margin-bottom:24px}
+.lead b{color:var(--sun-light)}
+.res-sys{background:rgba(255,176,32,.1);border:1px solid rgba(255,176,32,.35);border-radius:var(--r);padding:18px 20px;display:flex;align-items:center;gap:14px;margin-bottom:16px;text-align:left}
+.res-sys .material-icons{font-size:34px;color:var(--sun);flex-shrink:0}
+.res-sys b{display:block;font-size:16px;color:var(--sun-light);font-family:'Oswald';font-weight:600;letter-spacing:.3px}
+.res-sys span{font-size:12.5px;color:rgba(255,255,255,.72)}
+.res-eco{text-align:center;background:linear-gradient(135deg,rgba(14,58,99,.6),rgba(4,16,31,.5));border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:28px 18px;margin-bottom:24px}
+.res-eco .lbl{font-size:13px;font-weight:700;letter-spacing:.6px;color:rgba(255,255,255,.78);text-transform:uppercase}
+.res-eco .big{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(42px,12vw,72px);line-height:1;color:var(--sun);margin:6px 0;text-shadow:0 4px 20px var(--sun-glow)}
+.res-eco .cup{font-size:14px;color:var(--sun-light);font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;width:100%;font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;letter-spacing:.8px;text-transform:uppercase;padding:18px 26px;border-radius:var(--r-pill);border:none;cursor:pointer;transition:all var(--t);text-decoration:none}
+.btn-wpp{background:var(--ok);color:#fff;box-shadow:0 10px 30px rgba(37,211,102,.4)}
+.btn-wpp:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(37,211,102,.55)}
+.btn-wpp svg{width:24px;height:24px;fill:#fff}
+.store{font-size:13px;color:rgba(255,255,255,.7);margin-top:14px}
+.store .material-icons{font-size:15px;color:var(--sun);vertical-align:-.18em}
+.disc{font-size:11.5px;color:rgba(255,255,255,.45);margin-top:18px;line-height:1.55}
+.foot{text-align:center;margin-top:20px;font-size:12px;color:rgba(255,255,255,.5)}
+.foot a{color:var(--sun-light);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><img src="assets/logo-sunfalls-branca.png" alt="Sunfalls Energia Solar"></div>
+  <div class="card">
+    <div class="ring"><span class="material-icons">emoji_events</span></div>
+    <h1>Seu resultado está <span class="hl">pronto!</span></h1>
+    <p class="lead" id="saudacao">Obrigado por participar! Veja abaixo o sistema ideal pro seu perfil.</p>
+
+    <div class="res-sys">
+      <span class="material-icons">solar_power</span>
+      <div><b id="r-sistema">Sistema Solar Residencial</b><span id="r-sistema-sub">Dimensionado pro seu consumo.</span></div>
+    </div>
+
+    <div class="res-eco">
+      <div class="lbl">Você economiza por Copa do Mundo</div>
+      <div class="big" id="r-eco">R$ 25.920</div>
+      <div class="cup">☀️ a cada 4 anos · <span id="r-eco-ano">R$ 6.480</span>/ano de economia</div>
+    </div>
+
+    <a class="btn btn-wpp" id="wpp" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar com a Sunfalls
+    </a>
+    <p class="store"><span class="material-icons">store</span> Atendimento: <b id="loja-nome">Sunfalls</b></p>
+    <p class="disc">*Estimativa com base em 90% de economia sobre a conta informada. O valor exato é calculado num orçamento gratuito e sem compromisso.</p>
+  </div>
+  <p class="foot">☀️ Sunfalls Energia Solar · Londrina · Cascavel · Foz do Iguaçu (PR) &nbsp;|&nbsp; <a href="index.html">Refazer o quiz</a></p>
+</div>
+
+<script>
+// Fallback de WhatsApp por loja (caso a pessoa abra a página direto)
+const WHATS_LOJA={
+  londrina:{numero:'554399124301', nome:'Sunfalls Londrina (PR)'},
+  cascavel:{numero:'554599852431', nome:'Sunfalls Cascavel (PR)'},
+  foz:     {numero:'554591441136', nome:'Sunfalls Foz do Iguaçu (PR)'}
+};
+let d={};
+try{d=JSON.parse(localStorage.getItem('sunfalls_quiz')||'{}');}catch(e){d={};}
+
+const loja=d.loja&&WHATS_LOJA[d.loja]?d.loja:'londrina';
+const whats=d.whats||WHATS_LOJA[loja].numero;
+const lojaNome=d.lojaNome||WHATS_LOJA[loja].nome;
+
+if(d.nome) document.getElementById('saudacao').innerHTML='Tudo certo, <b>'+d.nome.split(' ')[0]+'</b>! Veja o sistema ideal pro seu perfil 👇';
+if(d.sistema) document.getElementById('r-sistema').textContent=d.sistema;
+if(d.sistema){
+  const dim=(d.kWp?('~'+d.kWp+' kWp'+(d.placas?(' · '+d.placas+' placas'):'')+(d.consumoKwh?(' · ~'+d.consumoKwh+' kWh/mês'):'')):'');
+  const subs={'Locação de Energia / Usina por Assinatura':'Economize sem instalar nada no telhado — ideal pra imóvel alugado.'+(dim?(' Equivale a '+dim+'.'):'')};
+  document.getElementById('r-sistema-sub').textContent=subs[d.sistema]||(dim?(dim+' — dimensionado pro seu consumo.'):'Dimensionado pro seu consumo e sua cidade.');
+}
+if(typeof d.ecoCopa==='number'){document.getElementById('r-eco').textContent='R$ '+d.ecoCopa.toLocaleString('pt-BR');}
+if(typeof d.ecoAno==='number'){document.getElementById('r-eco-ano').textContent='R$ '+d.ecoAno.toLocaleString('pt-BR');}
+document.getElementById('loja-nome').textContent=lojaNome;
+
+const msg=encodeURIComponent(
+  'Olá Sunfalls! Fiz o Quiz da Copa da Economia no site e quero meu orçamento solar.\n\n'+
+  (d.nome?('*Nome:* '+d.nome+'\n'):'')+
+  (d.cidade?('*Cidade:* '+d.cidade+'\n'):'')+
+  (d.conta?('*Conta de luz:* R$ '+(d.conta==='900'?'900+':d.conta)+'/mês\n'):'')+
+  (d.casa?('*Casa própria:* '+d.casa+'\n'):'')+
+  (d.sistema?('*Sistema ideal:* '+d.sistema+(d.kWp?(' (~'+d.kWp+' kWp'+(d.placas?(' · '+d.placas+' placas'):'')+')'):'')+'\n'):'')+
+  (d.consumoKwh?('*Consumo estimado:* ~'+d.consumoKwh+' kWh/mês\n'):'')+
+  (typeof d.ecoCopa==='number'?('*Economia por Copa (4 anos):* R$ '+d.ecoCopa.toLocaleString('pt-BR')):'')
+);
+document.getElementById('wpp').href='https://wa.me/'+whats+'?text='+msg;
+
+window.dataLayer=window.dataLayer||[];
+window.dataLayer.push({event:'obrigado_quiz',loja:loja});
+</script>
+</body>
+</html>
